@@ -45,28 +45,22 @@ module.exports = class extends Component {
                 <article class={`card-content article${'direction' in page ? ' ' + page.direction : ''}`} role="article">
                     {/* Metadata */}
                     {/* Title */}
-                    <h1 className="title is-size-3 is-size-4-mobile has-text-weight-normal">
+                    {/* <h1 className="title is-size-3 is-size-4-mobile has-text-weight-normal">
                         {index ?
                             <a className="has-link-black-ter" href={url_for(page.link || page.path)}>
                                 <i className="fas fa-angle-double-right"></i>{page.title}
                             </a> :
                             [<i className="fas fa-angle-double-right"></i>, page.title]
                         }
-                    </h1>                    
+                    </h1>                     */}
                     {page.layout !== 'page' ? <div class="article-meta is-size-7 is-uppercase level is-mobile">
                         <div class="level-left">
-                            {/* Creation Date */}
-                            {/* {page.date && <span class="level-item" dangerouslySetInnerHTML={{
-                                __html: _p('article.created_at', `<time dateTime="${date_xml(page.date)}" title="${new Date(page.date).toLocaleString()}">${date(page.date)}</time>`)
-                            }}></span>} */}
+                            {/* Creation Date */}                            
                             {page.date && <span class="level-item">
                                 <i className="far fa-calendar-alt">&nbsp;</i>
                                 <time dateTime={date_xml(page.date)} title={date_xml(page.date)}>{date(page.date)}</time>
                             </span>}
                             {/* Last Update Date */}
-                            {/* {page.updated && <span class="level-item" dangerouslySetInnerHTML={{
-                                __html: _p('article.updated_at', `<time dateTime="${date_xml(page.updated)}" title="${new Date(page.updated).toLocaleString()}">${date(page.updated)}</time>`)
-                            }}></span>} */}
                             {shouldShowUpdated && <span class="level-item is-hidden-mobile">
                                 <i class="far fa-calendar-check">&nbsp;</i>
                                 <time dateTime={date_xml(page.updated)} title={date_xml(page.updated)}>{date(page.updated)}</time>
@@ -75,6 +69,7 @@ module.exports = class extends Component {
                             {page.author ? <span class="level-item"> {page.author} </span> : null}
                             {/* Categories */}
                             {page.categories && page.categories.length ? <span class="level-item">
+                                <i class="far fa-folder-open has-text-grey"></i>&nbsp;
                                 {(() => {
                                     const categories = [];
                                     page.categories.forEach((category, i) => {
@@ -88,6 +83,7 @@ module.exports = class extends Component {
                             </span> : null}
                             {/* Read time */}
                             {article && article.readtime && article.readtime === true ? <span class="level-item">
+                                <i class="far fa-clock"></i>&nbsp;
                                 {(() => {
                                     const words = getWordCount(page._content);
                                     const time = moment.duration((words / 150.0) * 60, 'seconds');
@@ -96,7 +92,8 @@ module.exports = class extends Component {
                             </span> : null}
                             {/* Visitor counter */}
                             {!index && plugins && plugins.busuanzi === true ? <span class="level-item" id="busuanzi_container_page_pv" dangerouslySetInnerHTML={{
-                                __html: _p('plugin.visit_count', '<span id="busuanzi_value_page_pv">0</span>')
+                                // __html: _p('plugin.visit_count', '<span id="busuanzi_value_page_pv">0</span>')
+                                __html: _p('plugin.visit_count', '<i class="far fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv">0</span>')
                             }}></span> : null}
                         </div>
                     </div> : null}
@@ -111,6 +108,7 @@ module.exports = class extends Component {
                         ? <ArticleLicensing.Cacheable page={page} config={config} helper={helper} /> : null}
                     {/* Tags */}
                     {!index && page.tags && page.tags.length ? <div class="article-tags is-size-7 mb-4">
+                        <i class="fas fa-tags has-text-grey"></i>&nbsp;
                         <span class="mr-2">#</span>
                         {page.tags.map(tag => {
                             return <a class="link-muted mr-2" rel="tag" href={url_for(tag.path)}>{tag.name}</a>;

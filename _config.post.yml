@@ -11,13 +11,13 @@ widgets:
         # Author's current location
         location: Bei Jing
         # URL or path to the avatar image
-        avatar: 
+        avatar: /img/tx.JPG 
         # Whether show the rounded avatar image
-        avatar_rounded: false
+        avatar_rounded: true
         # Email address for the Gravatar
         gravatar: 
         # URL or path for the follow button
-        follow_link: 'https://github.com/ppoffice'
+        follow_link: 'https://github.com/CsJsss'
         # Links to be shown on the bottom of the profile widget
         social_links:
             Github:

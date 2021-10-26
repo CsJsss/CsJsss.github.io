@@ -156,6 +156,7 @@ article:
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Search/
 search:
     type: insight
+    # type: baidu
 # Comment plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Comment/
 comment:
@@ -166,43 +167,46 @@ comment:
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Donation/
 donates:
     # "Afdian.net" donate button configurations
-    -
-        type: afdian
-        # URL to the "Afdian.net" personal page
-        url: ''
+    # -
+    #     type: afdian
+    #     # URL to the "Afdian.net" personal page
+    #     url: ''
     # Alipay donate button configurations
     -
         type: alipay
         # Alipay qrcode image URL
-        qrcode: ''
+        qrcode: '/img/pay_zfb.jpg'
     # "Buy me a coffee" donate button configurations
-    -
-        type: buymeacoffee
-        # URL to the "Buy me a coffee" page
-        url: ''
+    # -
+    #     type: buymeacoffee
+    #     # URL to the "Buy me a coffee" page
+    #     url: ''
     # Patreon donate button configurations
-    -
-        type: patreon
-        # URL to the Patreon page
-        url: ''
+    # -
+    #     type: patreon
+    #     # URL to the Patreon page
+    #     url: ''
     # Paypal donate button configurations
-    -
-        type: paypal
-        # Paypal business ID or email address
-        business: ''
-        # Currency code
-        currency_code: USD
+    # -
+    #     type: paypal
+    #     # Paypal business ID or email address
+    #     business: ''
+    #     # Currency code
+    #     currency_code: USD
     # Wechat donate button configurations
     -
         type: wechat
         # Wechat qrcode image URL
-        qrcode: ''
+        qrcode: 'img/pay_wx.png'
 # Share plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Share/
 share:
-    type: sharethis
-    # URL to the ShareThis share plugin script
-    install_url: ''
+    # type: sharethis
+    # # URL to the ShareThis share plugin script
+    # install_url: ''
+    # share:
+    type: addtoany
+
 # Sidebar configurations.
 # Please be noted that a sidebar is only visible when it has at least one widget
 sidebar:
@@ -338,7 +342,7 @@ plugins:
     # https://www.bing.com/toolbox/webmaster/
     bing_webmaster:
         # Bing Webmaster Tools tracking ID in the <meta> tag
-        tracking_id: 
+        tracking_id: A6541EF9B7F869AB9FA1555858C16EEA
     # BuSuanZi site/page view counter
     # https://busuanzi.ibruce.info
     busuanzi: false
@@ -379,7 +383,7 @@ plugins:
     katex: false
     # Enable the MathJax math typesetting support
     # https://www.mathjax.org/
-    mathjax: false
+    mathjax: true
     # Enable the Outdated Browser plugin
     # http://outdatedbrowser.com/
     outdated_browser: false
@@ -403,6 +407,7 @@ providers:
     # Name or URL template of the JavaScript and/or stylesheet CDN provider
     cdn: jsdelivr
     # Name or URL template of the webfont CDN provider
-    fontcdn: google
+    # fontcdn: google
+    fontcdn: loli.net
     # Name or URL of the fontawesome icon font CDN provider
     iconcdn: fontawesome
