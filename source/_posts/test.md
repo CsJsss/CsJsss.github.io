@@ -1,7 +1,7 @@
 ---
 title: test
 date: 2021-10-25 12:48:19
-tags:
+tags: test
 
 ---
 
