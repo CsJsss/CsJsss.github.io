@@ -160,9 +160,24 @@ search:
 # Comment plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Comment/
 comment:
-    type: disqus
+    # type: disqus
     # Disqus shortname
-    shortname: ''
+    # shortname: ''
+    type: gitalk
+    client_id: 2ade84c1c8c40202a0fb
+    client_secret: 2787c65a1c0d7b924bfeb836757ce9bdb2df8865
+    repo: https://github.com/CsJsss/CsJsss.github.io
+    owner: CsJsss
+    admin:
+        - CsJsss
+    per_page: 20                    # 可选填
+    distraction_free_mode: false    # 可选填
+    pager_direction: last           # 可选填
+    create_issue_manually: false    # 可选填
+    proxy:                          # 可选填
+    flip_move_options:              # 可选填
+    enable_hotkey: true             # 可选填
+    language: zh-CN                 # 可选填
 # Donate plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Donation/
 donates:
