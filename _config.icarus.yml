@@ -105,11 +105,11 @@ head:
 navbar:
     # Navigation menu items
     menu:
-        Home: /
-        Archives: /archives
-        Categories: /categories
-        Tags: /tags
-        About: /about
+        主页: /
+        标签: /tags
+        分类: /categories
+        归档: /archives
+        关于: /about
     # Links to be shown on the right of the navigation bar
     links:
         Download on GitHub:
@@ -241,9 +241,9 @@ widgets:
         # Author name
         author: Jsss
         # Author title
-        author_title: Student
+        author_title: BIT-CS硕士在读
         # Author's current location
-        location: Bei Jing
+        location: 北京
         # URL or path to the avatar image
         avatar: /img/tx.JPG 
         # Whether show the rounded avatar image
@@ -257,15 +257,15 @@ widgets:
             Github:
                 icon: fab fa-github
                 url: 'https://github.com/CsJsss'
-            ZhiHu:
+            知乎:
                 icon: fab fa-zhihu
                 url: 'https://www.zhihu.com/people/jiang-shao-jie-94'
             LeetCode:
-                icon: fab external-link
+                icon: fas fa-lightbulb
                 url: 'https://leetcode-cn.com/u/studyeveryday/'
-            Dribbble:
-                icon: fab fa-dribbble
-                url: 'https://dribbble.com'
+            # Dribbble:
+            #     icon: fab fa-dribbble
+            #     url: 'https://dribbble.com'
             RSS:
                 icon: fas fa-rss
                 url: /
@@ -357,7 +357,7 @@ plugins:
         tracking_id: A6541EF9B7F869AB9FA1555858C16EEA
     # BuSuanZi site/page view counter
     # https://busuanzi.ibruce.info
-    busuanzi: false
+    busuanzi: true
     # CNZZ statistics
     # https://www.umeng.com/web
     cnzz:
@@ -419,7 +419,7 @@ providers:
     # Name or URL template of the JavaScript and/or stylesheet CDN provider
     cdn: jsdelivr
     # Name or URL template of the webfont CDN provider
-    # fontcdn: google
-    fontcdn: loli.net
+    fontcdn: google
+    # fontcdn: loli.net
     # Name or URL of the fontawesome icon font CDN provider
     iconcdn: fontawesome
