@@ -26,7 +26,6 @@ public_dir: public
 tag_dir: tags
 archive_dir: archives
 category_dir: categories
-about_dir: about
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
@@ -108,3 +107,8 @@ deploy:
   type: git
   repository: https://github.com/CsJsss/CsJsss.github.io
   branch: master
+
+admin:
+  username: jsss
+  password_hash: $2a$10$Wz7JODeTGk0LM/psc6lAUOR1tTGAJ1bg2gDQLG/Bl5p17xSICIMqi
+  secret: secret
