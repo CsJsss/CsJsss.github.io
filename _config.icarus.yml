@@ -138,8 +138,10 @@ article:
         theme: atom-one-light
         # Show copy code button
         clipboard: true
+        line_number: true
         # Default folding status of the code blocks. Can be "", "folded", "unfolded"
-        fold: unfolded
+        fold: folded
+        # fold: unfolded
     # Whether to show estimated article reading time
     readtime: true
     # Article licensing block
