@@ -23,12 +23,12 @@ widgets:
             Github:
                 icon: fab fa-github
                 url: 'https://github.com/CsJsss'
-            Facebook:
+            ZhiHu:
                 icon: fab fa-zhihu
                 url: 'https://www.zhihu.com/people/jiang-shao-jie-94'
-            Twitter:
-                icon: fab fa-twitter
-                url: 'https://twitter.com'
+            LeetCode:
+                icon: fab external-link
+                url: 'https://leetcode-cn.com/u/studyeveryday/'
             Dribbble:
                 icon: fab fa-dribbble
                 url: 'https://dribbble.com'
