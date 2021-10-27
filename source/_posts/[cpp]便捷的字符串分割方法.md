@@ -27,7 +27,7 @@ getline函数接受三个参数，分别是`input`(the stream to get data from),
 
 ### Code
 
-```cpp > folded
+```cpp
 #include <iostream>
 #include <sstream>
 #include <string>
