@@ -160,13 +160,10 @@ search:
 # Comment plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Comment/
 comment:
-    # type: disqus
-    # Disqus shortname
-    # shortname: ''
     type: gitalk
-    client_id: 2ade84c1c8c40202a0fb
-    client_secret: 2787c65a1c0d7b924bfeb836757ce9bdb2df8865
-    repo: https://github.com/CsJsss/CsJsss.github.io
+    client_id: 2502ec5280f5ce20c791
+    client_secret: 7c358ad7c9104db909898ed9eaa7b1e9af99f958
+    repo: CsJsss.github.io
     owner: CsJsss
     admin:
         - CsJsss
