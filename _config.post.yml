@@ -1,40 +1,40 @@
 widgets:
     # Profile widget configurations
-    -
-        # Where should the widget be placed, left sidebar or right sidebar
-        position: left
-        type: profile
-        # Author name
-        author: Jsss
-        # Author title
-        author_title: BIT-CS硕士在读
-        # Author's current location
-        location: 北京
-        # URL or path to the avatar image
-        avatar: /img/tx.JPG 
-        # Whether show the rounded avatar image
-        avatar_rounded: true
-        # Email address for the Gravatar
-        gravatar: 
-        # URL or path for the follow button
-        follow_link: 'https://github.com/CsJsss'
-        # Links to be shown on the bottom of the profile widget
-        social_links:
-            Github:
-                icon: fab fa-github
-                url: 'https://github.com/CsJsss'
-            知乎:
-                icon: fab fa-zhihu
-                url: 'https://www.zhihu.com/people/jiang-shao-jie-94'
-            LeetCode:
-                icon: fas fa-lightbulb
-                url: 'https://leetcode-cn.com/u/studyeveryday/'
-            # Dribbble:
-            #     icon: fab fa-dribbble
-            #     url: 'https://dribbble.com'
-            RSS:
-                icon: fas fa-rss
-                url: /
+    # -
+    #     # Where should the widget be placed, left sidebar or right sidebar
+    #     position: left
+    #     type: profile
+    #     # Author name
+    #     author: Jsss
+    #     # Author title
+    #     author_title: BIT-CS硕士在读
+    #     # Author's current location
+    #     location: 北京
+    #     # URL or path to the avatar image
+    #     avatar: /img/tx.JPG 
+    #     # Whether show the rounded avatar image
+    #     avatar_rounded: true
+    #     # Email address for the Gravatar
+    #     gravatar: 
+    #     # URL or path for the follow button
+    #     follow_link: 'https://github.com/CsJsss'
+    #     # Links to be shown on the bottom of the profile widget
+    #     social_links:
+    #         Github:
+    #             icon: fab fa-github
+    #             url: 'https://github.com/CsJsss'
+    #         知乎:
+    #             icon: fab fa-zhihu
+    #             url: 'https://www.zhihu.com/people/jiang-shao-jie-94'
+    #         LeetCode:
+    #             icon: fas fa-lightbulb
+    #             url: 'https://leetcode-cn.com/u/studyeveryday/'
+    #         # Dribbble:
+    #         #     icon: fab fa-dribbble
+    #         #     url: 'https://dribbble.com'
+    #         RSS:
+    #             icon: fas fa-rss
+    #             url: /
     # -
     #     # Where should the widget be placed, left sidebar or right sidebar
     #     position: left
