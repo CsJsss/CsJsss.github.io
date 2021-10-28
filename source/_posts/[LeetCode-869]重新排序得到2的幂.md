@@ -22,8 +22,8 @@ categories:
 
 ## Code
 
+1. 解法一
 ```cpp
-// 解法1
 class Solution {
 public:
     static const int M = 11;
@@ -55,9 +55,8 @@ public:
     }
 };
 ```
-
+2. 解法二
 ```cpp 
-// 解法2
 class Solution {
 public:
     static const int M = 11;
@@ -85,7 +84,7 @@ public:
 ```
 ----
 
-## 复杂度分析
+## 复杂度分析(解法2)
 
 其中C为30, N为1e9.
 
