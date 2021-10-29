@@ -106,10 +106,12 @@ navbar:
     # Navigation menu items
     menu:
         主页: /
+        归档: /archives
         标签: /tags
         分类: /categories
-        归档: /archives
+        留言板: /message
         关于: /About
+
     # Links to be shown on the right of the navigation bar
     links:
         Download on GitHub:
