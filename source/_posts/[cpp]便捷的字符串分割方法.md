@@ -13,6 +13,8 @@ tags:
 
 不像python的str提供的内置`split`方法一样方便的进行字符串分割，c++的`string`模板库没有直接提供分割字符串的成员方法。偶然在看《c++prime》时看到`string`模板库提供`getline`方法, 利用方法可以实现自定义分隔符分割字符串。
 
+<!-- more --> 
+
 ## 使用getline进行分割
 
 getline函数接受三个参数，分别是`input`(the stream to get data from), `str`(the string to put the data into), `delim`(the delimiter character) 。该函数返回值是`input`。
