@@ -2,7 +2,7 @@
 title: '[LeetCode-869]重新排序得到2的幂'
 tags:
   - LeetCode
-  - 每日一题
+  - 枚举
 date: 2021-10-28 10:51:44
 updated:
 categories:

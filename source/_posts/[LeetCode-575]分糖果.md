@@ -3,7 +3,7 @@ title: '[LeetCode-575]分糖果'
 toc: true
 tags:
   - LeetCode
-  - 每日一题
+  - 贪心
 categories:
   - - algo
     - LeetCode
