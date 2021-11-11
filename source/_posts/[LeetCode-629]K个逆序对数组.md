@@ -32,13 +32,11 @@ updated:
     - 因此可得: $f[i][j]$ = $\sum_{k=0}^{i - 1} f[i - 1][j - k]$
     - 由上分析可见, 状态为$O(n^2)$, 转移为$O(n)$, 总时间复杂度为$O(n^3)$, 会超时.
     - 利用**前缀和**优化状态转移: 记$s[i][j]$ = $\sum_{k=0}^j f[i][k]$, 可得状态计算：
-    $$ 
-    f[i][j] =\left\{
-    \begin{aligned}
-    s[i - 1][j], i > j \\
-    s[i - 1][j] - s[i - 1][j - i], i <= j \\
-    \end{aligned}
-    \right.
+    $$
+    f[i][j] = \begin{cases}
+    s[i - 1][j] & \text{if i > j} \\
+    s[i - 1][j] - s[i - 1][j - i] & \text{if i <= j} \\
+    \end{cases}
     $$
 
 ## Code
