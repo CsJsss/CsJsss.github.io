@@ -268,7 +268,8 @@ widgets:
                 icon: fab fa-zhihu
                 url: 'https://www.zhihu.com/people/jiang-shao-jie-94'
             LeetCode:
-                icon: fas fa-lightbulb
+                # icon: fas fa-lightbulb
+                icon: iconfont icon-leetcode
                 url: 'https://leetcode-cn.com/u/studyeveryday/'
             # Dribbble:
             #     icon: fab fa-dribbble
