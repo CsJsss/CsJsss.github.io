@@ -40,10 +40,6 @@ widgets:
     #     position: left
     #     type: catalogue
     # Table of contents widget configurations
-    -
-        # Where should the widget be placed, left sidebar or right sidebar
-        position: left
-        type: recent_posts
     # Categories widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
@@ -57,6 +53,10 @@ widgets:
         depth: 4
     # Recommendation links widget configurations
     # Categories widget configurations
+    -
+        # Where should the widget be placed, left sidebar or right sidebar
+        position: left
+        type: recent_posts
     # Tags widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar

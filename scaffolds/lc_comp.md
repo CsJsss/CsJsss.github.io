@@ -12,7 +12,7 @@ categories:
 
 **Rank** : 
 **Solved** :
-![](https://github.com/CsJsss/CsJsss.github.io/blob/hexo/themes/hexo-theme-icarus/source/img/2021/11/8/LeetCode_%E5%91%A8%E8%B5%9B266.png)
+![](https://cdn.jsdelivr.net/gh/CsJsss/CsJsss.github.io@hexo/themes/hexo-theme-icarus/source/img/)
 
 [竞赛链接]()
 
