@@ -1,2 +1,2 @@
-# Source Code of My Hexo
+# Source Code of My Blog
 [My Blog](https://csjsss.github.io/)
