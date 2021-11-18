@@ -1,8 +1,9 @@
 ---
 thumbnail: https://cdn.jsdelivr.net/gh/removeif/blog_image/img/2020/20201030170457.png
-date: 2019-09-09 18:52:09
+date: 2021-11-18 10:21:06
 layout: post
 licenses: 'fasle'
+cover: /img/gallery/feria.png
 ---
 <div class="friend-title-item"><br>申请友链须知<br><br><hr></div>
 
