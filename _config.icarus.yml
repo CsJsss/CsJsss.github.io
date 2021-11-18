@@ -110,6 +110,7 @@ navbar:
         标签: /tags
         分类: /categories
         留言板: /message
+        友链: /friend
         关于: /about
 
     # Links to be shown on the right of the navigation bar

@@ -30,6 +30,7 @@ module.exports = class extends Component {
         const updateTime = article && article.update_time !== undefined ? article.update_time : true;
         const isUpdated = page.updated && !moment(page.date).isSame(moment(page.updated));
         const shouldShowUpdated = page.updated && ((updateTime === 'auto' && isUpdated) || updateTime === true);
+        const dontshowlicenses = page.licenses ? true : false;
 
         return <Fragment>
             {/* Main content */}
@@ -104,7 +105,7 @@ module.exports = class extends Component {
                     {/* Content/Excerpt */}
                     <div class="content" dangerouslySetInnerHTML={{ __html: index && page.excerpt ? page.excerpt : page.content }}></div>
                     {/* Licensing block */}
-                    {!index && article && article.licenses && Object.keys(article.licenses)
+                    {!index && article && !dontshowlicenses && article.licenses && Object.keys(article.licenses)
                         ? <ArticleLicensing.Cacheable page={page} config={config} helper={helper} /> : null}
                     <hr style="height:1px;margin:1rem 0"/>
                     <div className="level is-mobile is-flex">                    
