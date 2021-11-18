@@ -57,12 +57,12 @@ module.exports = class extends Component {
                     {page.layout !== 'page' ? <div class="article-meta is-size-7 is-uppercase level is-mobile">
                         <div class="level-left">
                             {/* Creation Date */}                            
-                            {page.date && <span class="level-item">
+                            {!dontshowlicenses && page.date && <span class="level-item">
                                 <i className="far fa-calendar-alt">&nbsp;</i>
                                 <time dateTime={date_xml(page.date)} title={date_xml(page.date)}>{date(page.date)}</time>
                             </span>}
                             {/* Last Update Date */}
-                            {shouldShowUpdated && <span class="level-item is-hidden-mobile">
+                            {!dontshowlicenses && shouldShowUpdated && <span class="level-item is-hidden-mobile">
                                 <i class="far fa-calendar-check">&nbsp;</i>
                                 <time dateTime={date_xml(page.updated)} title={date_xml(page.updated)}>{date(page.updated)}</time>
                             </span>}
@@ -83,7 +83,7 @@ module.exports = class extends Component {
                                 })()}
                             </span> : null}
                             {/* Read time */}
-                            {article && article.readtime && article.readtime === true ? <span class="level-item">
+                            {!dontshowlicenses && article && article.readtime && article.readtime === true ? <span class="level-item">
                                 <i class="far fa-clock"></i>&nbsp;
                                 {(() => {
                                     const words = getWordCount(page._content);
@@ -92,7 +92,7 @@ module.exports = class extends Component {
                                 })()}
                             </span> : null}
                             {/* Visitor counter */}
-                            {!index && plugins && plugins.busuanzi === true ? <span class="level-item" id="busuanzi_container_page_pv" dangerouslySetInnerHTML={{
+                            {!dontshowlicenses && !index && plugins && plugins.busuanzi === true ? <span class="level-item" id="busuanzi_container_page_pv" dangerouslySetInnerHTML={{
                                 // __html: _p('plugin.visit_count', '<span id="busuanzi_value_page_pv">0</span>')
                                 __html: _p('plugin.visit_count', '<i class="far fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv">0</span>')
                             }}></span> : null}
