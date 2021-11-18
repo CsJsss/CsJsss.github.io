@@ -216,7 +216,7 @@ donates:
     -
         type: alipay
         # Alipay qrcode image URL
-        qrcode: 'https://cdn.jsdelivr.net/gh/CsJsss/CsJsss.github.io@hexo/themes/hexo-theme-icarus/source/img/pay_zfb.jpg'
+        qrcode: 'https://cdn.jsdelivr.net/gh/CsJsss/CsJsss.github.io@hexo/themes/icarus/source/img/pay_zfb.jpg'
     # "Buy me a coffee" donate button configurations
     # -
     #     type: buymeacoffee
@@ -238,7 +238,7 @@ donates:
     -
         type: wechat
         # Wechat qrcode image URL
-        qrcode: 'https://cdn.jsdelivr.net/gh/CsJsss/CsJsss.github.io@hexo/themes/hexo-theme-icarus/source/img//pay_wx.png'
+        qrcode: 'https://cdn.jsdelivr.net/gh/CsJsss/CsJsss.github.io@hexo/themes/icarus/source/img//pay_wx.png'
 # Share plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Share/
 share:
@@ -274,7 +274,7 @@ widgets:
         # Author's current location
         location: 北京
         # URL or path to the avatar image
-        avatar: https://cdn.jsdelivr.net/gh/CsJsss/CsJsss.github.io@hexo/themes/hexo-theme-icarus/source/img/tx.JPG 
+        avatar: https://cdn.jsdelivr.net/gh/CsJsss/CsJsss.github.io@hexo/themes/icarus/source/img/tx.JPG 
         # Whether show the rounded avatar image
         avatar_rounded: true
         # Email address for the Gravatar
