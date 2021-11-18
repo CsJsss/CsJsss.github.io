@@ -53,7 +53,7 @@ int main() {
 ### 结果
 
 <div style="align: center">
-<img src="https://cdn.jsdelivr.net/gh/CsJsss/CsJsss.github.io@hexo/themes/hexo-theme-icarus/source/img//2021/10/27/stringsplit.png"/>
+<img src="https://cdn.jsdelivr.net/gh/CsJsss/CsJsss.github.io@hexo/themes/icarus/source/img//2021/10/27/stringsplit.png"/>
 </div>
 <!-- ![result](/img/2021/10/27/stringsplit.png) -->
 

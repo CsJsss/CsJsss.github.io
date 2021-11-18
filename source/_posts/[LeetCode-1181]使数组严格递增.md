@@ -34,7 +34,7 @@ updated:
   1. 有了上述观察, 我们可以将问题首先进行转化. 首先将数组B中的重复元素去掉, 并对数组B排序, 记为$B'$.
   2. 这样问题可以转化成: 从数组$A$和数组$B'$(严格单调递增)中找到一条长度为$n$且**严格单调递增的路线**, 且路线上从`A`跳到`B'`的次数最少
 
-![转化后问题示意图](https://cdn.jsdelivr.net/gh/CsJsss/CsJsss.github.io@hexo/themes/hexo-theme-icarus/source/img/2021/11/11/LeetCode-1187.png)
+![转化后问题示意图](https://cdn.jsdelivr.net/gh/CsJsss/CsJsss.github.io@hexo/themes/icarus/source/img/2021/11/11/LeetCode-1187.png)
 
 - 转化后的问题可以使用动态规划来解决
 - **动态规划**

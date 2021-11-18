@@ -2,7 +2,7 @@
 date: 2021-11-18 10:21:06
 layout: post
 licenses: 'fasle'
-cover: /img/gallery/feria.png
+cover: https://cdn.jsdelivr.net/gh/CsJsss/CsJsss.github.io@hexo/themes/icarus/source/img/gallery/feria.png
 ---
 <div class="friend-title-item"><br><font size=4>申请友链须知</font><br><br><hr></div>
 

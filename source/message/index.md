@@ -4,7 +4,7 @@ date: 2021-10-29 15:24:50
 toc: false
 layout: post
 licenses: 'fasle'
-cover: /img/gallery/Trees Looking.jpg
+cover: https://cdn.jsdelivr.net/gh/CsJsss/CsJsss.github.io@hexo/themes/icarus/source/img/gallery/Trees Looking.jpg
 ---
 
 

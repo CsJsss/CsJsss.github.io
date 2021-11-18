@@ -13,7 +13,7 @@ updated:
 Rank : `152/4384`
 Solved: `4/4`
 
-![Rank](https://cdn.jsdelivr.net/gh/CsJsss/CsJsss.github.io@hexo/themes/hexo-theme-icarus/source/img/2021/11/8/LeetCode_周赛266.png)
+![Rank](https://cdn.jsdelivr.net/gh/CsJsss/CsJsss.github.io@hexo/themes/icarus/source/img/2021/11/8/LeetCode_周赛266.png)
 
 [竞赛链接](https://leetcode-cn.com/contest/weekly-contest-266/)
 <!--more-->

@@ -27,7 +27,7 @@ updated:
     1. $f[i][j]$ : 表示考虑前 $1 - i$ 个数, 且逆序对个数为 $j$ 时的方案数. 
   - 状态计算:
     状态计算的思路是`枚举最后一个不同点`[<sup>1</sup>](#refer-anchor-1): 即考虑将数字`i`放在什么位置. 放置`i`位置的可能方式如下:
-    ![状态划分](https://cdn.jsdelivr.net/gh/CsJsss/CsJsss.github.io@hexo/themes/hexo-theme-icarus/source/img/2021/11/11/LeetCode-629.png)
+    ![状态划分](https://cdn.jsdelivr.net/gh/CsJsss/CsJsss.github.io@hexo/themes/icarus/source/img/2021/11/11/LeetCode-629.png)
     - 由上图可见, 若将 $i$ 放置在 $i - k$下标处, 这会造成 $k - 1$个逆序对(数 $i$与 下标$\in[i - k + 1, i]$处的数构成逆序对)
     - 因此可得: $f[i][j]$ = $\sum_{k=0}^{i - 1} f[i - 1][j - k]$
     - 由上分析可见, 状态为$O(n^2)$, 转移为$O(n)$, 总时间复杂度为$O(n^3)$, 会超时.

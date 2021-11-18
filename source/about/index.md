@@ -2,7 +2,7 @@
 date: 2021-10-27 18:28:44
 layout: post
 licenses: 'fasle'
-cover: /img/gallery/BlueGrunge .jpg
+cover: https://cdn.jsdelivr.net/gh/CsJsss/CsJsss.github.io@hexo/themes/icarus/source/img/gallery/BlueGrunge .jpg
 ---
 > 不积跬步, 无以至千里; 不积小流, 无以成江海。
 
