@@ -314,14 +314,14 @@ widgets:
         # Where should the widget be placed, left sidebar or right sidebar
         position: left
         type: tags
-    -
-        # Where should the widget be placed, left sidebar or right sidebar
-        position: left
-        type: links
-        # Names and URLs of the sites
-        links:
-            Mikoto:  'https://ac-mikoto.top/'
-            Hexo: 'https://hexo.io'
+    # -
+    #     # Where should the widget be placed, left sidebar or right sidebar
+    #     position: left
+    #     type: links
+    #     # Names and URLs of the sites
+    #     links:
+    #         Mikoto:  'https://ac-mikoto.top/'
+    #         Hexo: 'https://hexo.io'
     # Recommendation links widget configurations
     # Google FeedBurner email subscription widget configurations
     -
