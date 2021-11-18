@@ -138,7 +138,8 @@ article:
     highlight:
         # Code highlight themes
         # https://github.com/highlightjs/highlight.js/tree/master/src/styles
-        theme: atom-one-light
+        # theme: atom-one-light
+        theme: xcode
         # Show copy code button
         clipboard: true
         line_number: true
