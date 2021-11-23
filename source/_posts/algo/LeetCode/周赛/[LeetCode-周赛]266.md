@@ -2,8 +2,11 @@
 title: '[LeetCode-周赛]266'
 toc: true
 tags:
-  - LeetCode
   - 周赛
+  - 枚举
+  - 二分搜索
+  - 状态压缩
+  - 动态规划
 categories:
   - [algo, LeetCode, 周赛]
 date: 2021-11-07 23:54:32
@@ -18,7 +21,7 @@ Solved: `4/4`
 [竞赛链接](https://leetcode-cn.com/contest/weekly-contest-266/)
 <!--more-->
 
-## T1: 统计字符串中的元音子字符串
+## [统计字符串中的元音子字符串](https://leetcode-cn.com/problems/count-vowel-substrings-of-a-string/)
 
 ### 思路
 - 注意到数据范围很小, 直接$O(n^2)$枚举所有子串, 然后$O(n)$判断该子串是否符合要求即可
@@ -55,7 +58,7 @@ public:
 - 空间复杂度$O(1)$
 ----
 
-## T2: 所有子字符串中的元音
+## [所有子字符串中的元音](https://leetcode-cn.com/problems/vowels-of-all-substrings/)
 
 ### 思路
 - 遍历字符串, 枚举每个元音字符对`答案的贡献`
@@ -88,7 +91,7 @@ public:
 - 空间复杂度$O(1)$
 ----
 
-## T3: 分配给商店的最多商品的最小值
+## [分配给商店的最多商品的最小值](https://leetcode-cn.com/problems/minimized-maximum-of-products-distributed-to-any-store/)
 
 ### 思路
 - 看到`最大值最小`立马想到`二分`
@@ -124,7 +127,7 @@ public:
 - 空间复杂度$O(1)$
 ----
 
-## T4: 最大化一张图中的路径价值
+## [最大化一张图中的路径价值](https://leetcode-cn.com/problems/maximum-path-quality-of-a-graph/)
 ### 思路
 - 动态规划:
   - $dist[i][j][k]$: 表示当前在`i`点, 还剩余`j`时间，走过的点的状态是`k`时候的最大价值 

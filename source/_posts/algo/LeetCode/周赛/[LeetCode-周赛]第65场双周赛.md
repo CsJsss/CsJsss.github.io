@@ -1,8 +1,12 @@
+---
 title: '[LeetCode-周赛]第65场双周赛'
 toc: true
 tags:
-  - LeetCode
   - 周赛
+  - 模拟
+  - 树状数组
+  - 二分搜索
+  - 贪心
 categories:
   - - algo
     - LeetCode
@@ -10,15 +14,17 @@ categories:
 date: 2021-11-14 17:31:56
 updated:
 ---
+
 **Rank** : `235/2676`
 **Solved** : `3/4`
+
 ![Rank](https://cdn.jsdelivr.net/gh/CsJsss/CsJsss.github.io@hexo/themes/icarus/source/img/2021/11/14/LeetCode双周赛65.png)
 
 [竞赛链接](https://leetcode-cn.com/contest/biweekly-contest-65/)
 
 <!--more-->
 
-## T1: 检查两个字符串是否几乎相等
+## [检查两个字符串是否几乎相等](https://leetcode-cn.com/problems/check-whether-two-strings-are-almost-equivalent/)
 
 ### 思路
 **模拟题意**. 使用哈希表或数组统计词频, 然后比较词频之差的绝对值是否超过3.
@@ -49,7 +55,7 @@ public:
 - 空间复杂度$O(\vert S\vert)$, $\vert S\vert$为字符集大小
 ----
 
-## T2: 模拟行走机器人 II
+## [模拟行走机器人 II](https://leetcode-cn.com/problems/walking-robot-simulation-ii/)
 
 ### 思路
 **模拟**. 一开始眼瞎没注意到数据范围, 每一步都按照题目要求模拟, 然后TLE了. 接着优化, 优化的方式写了两点。
@@ -201,7 +207,7 @@ public:
 - 空间复杂度$O(1)$
 ----
 
-## T3: 每一个查询的最大美丽值
+## [每一个查询的最大美丽值](https://leetcode-cn.com/problems/most-beautiful-item-for-each-query/)
 
 ### 思路
 
@@ -300,7 +306,7 @@ public:
 - 空间复杂度$O(N)$
 ----
 
-## T4: 你可以安排的最多任务数目
+## [你可以安排的最多任务数目](https://leetcode-cn.com/problems/maximum-number-of-tasks-you-can-assign/)
 
 ### 思路
 首先可以发现答案具有**二段性**. 若答案为`k`, 则所有小于等于`k`的任务数都能完成, 所有大于`k`的任务数均不能完成. 因此考虑二分答案. 这样问题转化成判断能否完成`mid`个任务.

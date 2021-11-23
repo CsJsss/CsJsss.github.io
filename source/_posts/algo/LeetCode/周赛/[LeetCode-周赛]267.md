@@ -2,8 +2,9 @@
 title: '[LeetCode-周赛]267'
 toc: true
 tags:
-  - LeetCode
   - 周赛
+  - 模拟
+  - 并查集
 categories:
   - - algo
     - LeetCode
@@ -21,7 +22,7 @@ updated:
 
 <!--more-->
 
-## T1: 买票需要的时间
+## [买票需要的时间](https://leetcode-cn.com/problems/time-needed-to-buy-tickets/)
 
 ### 思路
 注意到数据范围均很小, 因此直接使用双端队列(`deque`)模拟题意即可.
@@ -59,7 +60,7 @@ public:
 - 空间复杂度$O(N)$
 ----
 
-## T2: 反转偶数长度组的节点
+## [反转偶数长度组的节点](https://leetcode-cn.com/problems/reverse-nodes-in-even-length-groups/)
 
 ### 思路
 使用`vector`模拟题意, 注意反转的是偶数长度的组(错看成偶数编号的组, 白WA了两次)
@@ -138,7 +139,7 @@ public:
 - 空间复杂度$O(N)$
 ----
 
-## T3: 解码斜向换位密码
+## [解码斜向换位密码](https://leetcode-cn.com/problems/decode-the-slanted-ciphertext/)
 
 ### 思路
 模拟题意, 按照矩阵的方式填充好字符后. 遍历每条主对角线, 依次添加字符, 最后把末尾的空格去掉.
@@ -179,7 +180,7 @@ public:
 - 空间复杂度$O(N)$
 ----
 
-## T4: 处理含限制条件的好友请求
+## [处理含限制条件的好友请求](https://leetcode-cn.com/problems/process-restricted-friend-requests/)
 
 ### 思路
 使用**并查集**维护连通性. 每次处理请求时, 若已经在一个联通块中则结果为`True`; 否则**暴力**判断是否有一条限制边连接了这两个连通块中的两个点.
