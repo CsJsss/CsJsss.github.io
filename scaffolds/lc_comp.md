@@ -12,7 +12,7 @@ categories:
 
 **Rank** : 
 **Solved** :
-![](https://cdn.jsdelivr.net/gh/CsJsss/CsJsss.github.io@hexo/themes/hexo-theme-icarus/source/img/)
+![](https://cdn.jsdelivr.net/gh/CsJsss/CsJsss.github.io@hexo/themes/icarus/source/img/)
 
 [竞赛链接]()
 
