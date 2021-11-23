@@ -70,7 +70,7 @@ public:
 1. 时间复杂度$O(N * K)$
 2. 空间复杂度$O(N * K)$
 
-## 参考文献
+## 参考资料
 - [1] [B站yxc](https://space.bilibili.com/7836741?from=search&seid=17655252112390136376)
 
 ----
