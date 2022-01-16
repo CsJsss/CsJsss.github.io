@@ -16,13 +16,13 @@ updated:
 
 **Rank** : `273/5243`
 **Solved** : `4/4`
-![Rank](https://cdn.jsdelivr.net/gh/CsJsss/CsJsss.github.io@hexo/themes/icarus/source/img/2021/12/LeetCode第273场周赛.png)
+![Rank](https://cdn.jsdelivr.net/gh/CsJsss/CsJsss.github.io@hexo/themes/icarus/source/img/2022/1/LeetCode第276场周赛.png)
 
 [竞赛链接](https://leetcode-cn.com/contest/weekly-contest-276/)
 
 <!--more-->
 
-## [https://leetcode-cn.com/contest/weekly-contest-276/problems/divide-a-string-into-groups-of-size-k/](https://leetcode-cn.com/contest/weekly-contest-276/problems/divide-a-string-into-groups-of-size-k/) 
+## [将字符串拆分为若干长度为 k 的组](https://leetcode-cn.com/contest/weekly-contest-276/problems/divide-a-string-into-groups-of-size-k/) 
 
 ### 思路
 模拟题意, 如果最后一段的长度不足就补齐.
@@ -59,6 +59,7 @@ public:
 ## [得到目标值的最少行动次数](https://leetcode-cn.com/contest/weekly-contest-276/problems/minimum-moves-to-reach-target-score/)
 
 ### 思路
+
 写完记忆化才发现其实是**贪心**. 首先倒着做, 求从`target`变成1的最小花费. 然后贪心的做
 1. 当前数能被2整除且有整除次数, 则整除
 2. 否则就减一 (无整除次数直接可以返回答案)
@@ -106,15 +107,16 @@ public:
 ## [解决智力问题](https://leetcode-cn.com/contest/weekly-contest-276/problems/solving-questions-with-brainpower/)
 
 ### 思路
+
 首先可以想到使用**动态规划**, 因为选的方式无法穷举, 而且选与不选之间的状态转移也比较清楚.
 麻烦的是如果正向做, 求`f[i]`的时候, 计算选择`i`的时候, 我们要找一个`j`, 使得在`j`处选择后可以在`i`处选择, 且`f[j]`最大.
 反向做就比较友好, 避免了找`j`的过程.
 
 动态规划:
-  1. 状态定义:  f[i]表示考虑$i ~ n - 1$之间物品时候的最大价值.
-  2. 状态转移:  
+1. 状态定义:  f[i]表示考虑$i到n - 1$之间物品时候的最大价值.
+2. 状态转移:
     - 可以不拿`i`处的或只拿`i`处的: $f[i] = max(f[i + 1], cur)$
-    - 可以拿了`i`处后继续拿后面的:  $f[i] = max(f[i], f[i + questions[i][1] + 1] + cur)$
+    - 可以拿了`i`处后继续拿后面的(如果可以):  $f[i] = max(f[i], f[i + questions[i][1] + 1] + cur)$
 
 ### Code
 
