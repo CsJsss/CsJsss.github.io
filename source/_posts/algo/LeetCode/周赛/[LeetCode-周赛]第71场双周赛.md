@@ -12,8 +12,8 @@ date: 2022-02-05 23:51:53
 updated:
 ---
 
-**Rank** : 
-**Solved** :
+**Rank** : `239/3028`
+**Solved** : `4/4`
 
 ![Rank](https://cdn.jsdelivr.net/gh/CsJsss/CsJsss.github.io@hexo/themes/icarus/source/img/2022/1/LeetCode第71场双周赛.png)
 
