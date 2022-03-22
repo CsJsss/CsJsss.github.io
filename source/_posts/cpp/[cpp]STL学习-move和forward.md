@@ -3,7 +3,7 @@ title: '[cpp]STL学习-move和forward'
 toc: true
 date: 2022-03-22 10:16:56
 updated:
-categories:
+categories: cpp
 tags:
 ---
 
