@@ -253,8 +253,9 @@ private:
 template <typename T>
 class SharedPtr : noncopyable {
 public:
-    using value_type   = T;
-    using pointer_type = T*;
+    using value_type     = T;
+    using pointer_type   = T*;
+    using reference_type = T&;
 
     // 构造函数
     SharedPtr () : _ptr(nullptr), _ref(nullptr) {}
@@ -285,7 +286,29 @@ public:
         decrease();
     }  
 
+    int use_count() {
+        return _ref -> getRefCount();
+    }
 
+    // Dereferences the stored pointer. The behavior is undefined if the stored pointer is null.
+    pointer_type operator -> () {
+        return this -> _ptr;
+    }
+
+    reference_type operator * (){
+        return *(this -> _ptr);
+    }
+
+    pointer_type get() {
+        return this -> _ptr;
+    }
+
+    operator bool (){
+        return this -> _ptr != nullptr;
+    }
+
+private:
+    // 内部实现, 不对外开放
     void decrease() {
         if (_ptr == nullptr)
             return ;
@@ -302,19 +325,6 @@ public:
         _ref -> incRefCount();
     }
 
-    int use_count() {
-        return _ref -> getRefCount();
-    }
-
-    pointer_type operator -> () {
-        return this -> _ptr;
-    }
-
-    value_type operator * (){
-        return *(this -> _ptr);
-    }
-
-private:
     // 指向控制块的指针, 记录引用计数
     refCount* _ref;
     // 指向共享资源的指针
@@ -375,8 +385,9 @@ private:
 template <typename T>
 class SharedPtr : noncopyable {
 public:
-    using value_type   = T;
-    using pointer_type = T*;
+    using value_type     = T;
+    using pointer_type   = T*;
+    using reference_type = T&;
 
     // 构造函数
     SharedPtr () : _ptr(nullptr), _ref(nullptr) {}
@@ -407,7 +418,29 @@ public:
         decrease();
     }  
 
+    int use_count() {
+        return _ref -> getRefCount();
+    }
 
+    // Dereferences the stored pointer. The behavior is undefined if the stored pointer is null.
+    pointer_type operator -> () {
+        return this -> _ptr;
+    }
+
+    reference_type operator * (){
+        return *(this -> _ptr);
+    }
+
+    pointer_type get() {
+        return this -> _ptr;
+    }
+
+    operator bool (){
+        return this -> _ptr != nullptr;
+    }
+
+private:
+    // 内部实现, 不对外开放
     void decrease() {
         if (_ptr == nullptr)
             return ;
@@ -424,19 +457,6 @@ public:
         _ref -> incRefCount();
     }
 
-    int use_count() {
-        return _ref -> getRefCount();
-    }
-
-    pointer_type operator -> () {
-        return this -> _ptr;
-    }
-
-    value_type operator * (){
-        return *(this -> _ptr);
-    }
-
-private:
     // 指向控制块的指针, 记录引用计数
     refCount* _ref;
     // 指向共享资源的指针
@@ -444,18 +464,22 @@ private:
 };
 
 
-
 class Resource {
 public:
     Resource () = default;
     Resource (int val) : _val(val) {}
     
-    int get () {
+    int get () const {
         return _val;
     }
 private:
     int _val;
 };
+
+ostream& operator << (ostream& os, const Resource& res) {
+    os << res.get();
+    return os;
+}
 
 
 int main() {
@@ -466,6 +490,14 @@ int main() {
     cout << sp -> get() << endl;
     cout << (*nsp).get() << endl;
     cout << nsp.use_count() << endl;
+
+    // 使用前先判断是否为空, 调用了 operator bool
+    if (nsp) {
+        *nsp = 10086;
+        auto p = nsp.get();
+        cout << "nsp is not empty, *nsp = " << (*p) << endl;
+    }
+
     return 0;
 }
 
@@ -473,6 +505,7 @@ int main() {
 123
 123
 2
+nsp is not empty, *nsp = 10086
 ~SharedPtr() called
 ~SharedPtr() called
 free resource
