@@ -565,12 +565,13 @@ private:
 
 #### 测试样例
 
-测试样例是一个简单的**双线程奇偶交替打印**程序.
+测试样例是一个简单的**双线程奇偶交替打印**程序, 使用`CAS`和`mutex`
 
 ```cpp
 #include <iostream>
 #include <thread>
 #include <mutex>
+#include <atomic>
 
 using namespace std;
 
@@ -620,13 +621,16 @@ private:
 
 // 互斥锁
 mutex mtx;
-// 读共享, 写互斥
-bool isOdd;
+// 先打印奇数
+atomic<bool> isOdd(true);
+
 
 void printOdd() {
     for (int i = 1; i <= 100; i += 2) {
-        while (!isOdd) ;
-        
+        bool want = true;
+        // CAS, compare_exchange_weak会修改Expected的值, 因此需要在循环内修改
+        while (isOdd.compare_exchange_weak(want, want) == false)
+            want = true; 
         // 临界区
         MutexUniqueLock lock(mtx);
         cout << i << " ";
@@ -636,7 +640,10 @@ void printOdd() {
 
 void printEven() {
     for (int i = 2; i <= 100; i += 2) {
-        while (isOdd) ;
+        bool want = false;
+        // CAS, compare_exchange_weak会修改Expected的值, 因此需要在循环内修改
+        while (isOdd.compare_exchange_weak(want, want) == false)
+            want = false; 
         // 临界区
         MutexUniqueLock lock(mtx);
         cout << i << " ";
@@ -644,9 +651,8 @@ void printEven() {
     }
 }
 
+
 int main() {
-    // 先打印奇数
-    isOdd = true;
     
     thread oddThread(printOdd);
     thread evenThread(printEven);
