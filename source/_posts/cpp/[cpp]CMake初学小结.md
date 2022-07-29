@@ -118,8 +118,11 @@ target_link_libraries(PROJECT_LIB PUBLIC Threads::Threads)
 ##### 04-target ######
 
 # 所有的 target 文件
+# 这里获取路径的文件名. 比如输入是 /abc/xyz/test.cpp 则输出为: test
 file(GLOB targets CMAKE_CONFIGURE_DEPENDS targets/*.cpp)
 foreach(file ${targets})
+    # split string in CMake
+    # Link: https://stackoverflow.com/questions/5272781/what-is-common-way-to-split-string-into-list-with-cmake
     string(REPLACE "." ";" name_list ${file})
     list(GET name_list 0 prefix)
     string(REPLACE "/" ";" path_list ${prefix})
@@ -162,6 +165,8 @@ endforeach()
 ![Result](https://cdn.jsdelivr.net/gh/CsJsss/CsJsss.github.io@hexo/themes/icarus/source/img/2022/7/Results.png)
 
 ## Debug / Build One Target
+
+`Vscode`插件: `CMake`、 `CMake Tools`、`CMake Integration`、`CMake Language Support`
 
 ![Result](https://cdn.jsdelivr.net/gh/CsJsss/CsJsss.github.io@hexo/themes/icarus/source/img/2022/7/CMake.png)
 
